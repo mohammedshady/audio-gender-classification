@@ -1,0 +1,9 @@
+Flask
+Werkzeug
+flask-cors
+joblib
+librosa
+python_speech_features
+hmmlearn
+scikit-learn
+numpy
