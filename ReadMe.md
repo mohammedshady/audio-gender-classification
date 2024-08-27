@@ -2,7 +2,7 @@
 > An app for gender classification that utilizes machine learning mainly Support Vector Machine (SVM) to distinguish between male and female voices using MFCC-based feature extraction. 
 
 ## Description
-A simple audio classification model that identifies the speaker's gender by primarily extracting Mel-frequency cepstral coefficients (MFCC) features. It uses traditional machine learning algorithms Support Vector Machines (SVM). A simple interface was created to test the model.
+A simple audio classification model that identifies the speaker's gender by primarily extracting Mel-frequency cepstral coefficients (MFCC) features. It uses traditional machine learning algorithms Support Vector Machines (SVM). A simple interface was created to test the model.This mini project was part of the Digital Signal Processing course to practice the course content.
 
 ## Interface
 ![User Interface](assets/interface.gif "Interface Page")
