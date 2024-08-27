@@ -1,46 +1,42 @@
-# Important Notes
+# Audio gender classification app
+> An app for gender classification that utilizes machine learning mainly Support Vector Machine (SVM) to distinguish between male and female voices using MFCC-based feature extraction. 
 
+## Description
+A simple audio classification model that identifies the speaker's gender by primarily extracting Mel-frequency cepstral coefficients (MFCC) features. It uses traditional machine learning algorithms Support Vector Machines (SVM). A simple interface was created to test the model.
+
+## Interface
+![User Interface](assets/interface.gif "Interface Page")
+
+## Features
+
+- Fast audio classification.
+- Accurate gender detection of speaker.
+- Simple interface to allow users to test the model.
+
+## Getting Started
 - you must install ffmpeg first before running the project for audio processing here is a link on how to install https://phoenixnap.com/kb/ffmpeg-windows
-- there is a rare error that happens in frontend where after pressing the upload button the progress bar shows then dissapears without a result just press the upload button again and it should work
-  we are looking to fix this problem
+- ### Server Setup
+1. Clone the repository to your local machine:
+    `git clone https://github.com/mohammedshady/audio-gender-classification.git`
+2. Navigate to the repo directory:
+    `cd audio-gender-classification`
+3. Install the required dependencies in the requriements.txt:
+    `pip install -r requirements.txt`
+6. Start the Flask server:
+    `python server.py`
 
-# Files Description
+- ### Interface Setup
+1. Navigate to the client directory:
+    `cd front-end`
+2. Install the required dependencies:
+    `npm install`
+3. Start the React development server:
+    `npm run dev`
+4. Access the application in your web browser at `http://localhost:5173`.
 
-## 1-DATASET
+## Authors
+- **Mohammed Shady** - _GitHub Profile_: [mohammedshady](https://github.com/mohammedshady) | _Email_: mohatech777@gmail.com
 
-stores the original `dataset` and `data` folder
+If you encounter any issues or have suggestions for improvements, please reach out via email. Your feedback is valuable and helps us enhance the app for everyone.
 
-- dataset original files
-- data contains the files after splitting
 
-## 2-Model
-
-- ### genderClassification.ipynb
-
-  Containes the entire code as a notebook with descriptions for each block explaining its function so you only need this file and the dataset voxCeleb to run the model
-  (you can run this if you `dont have the model (svm_model.joblib)already saved` but you must have the dataset run from top to bottom blcok by block)
-  (otherwise you can just run the block of `library imports` and the block of `featureExtraction` then test the saved model using the last block `inference` by using the already existing file or your custom file)
-
-- ### svm_model.joblib
-
-  the pretrained and tested model saved from the notebook
-
-- ### custom-audio
-
-  folder to store the audios you can test in in the last block of code `inference` in the notebook
-
-## 3-BACKEND
-
-- ### server.py
-  Backend file that hosts the model to the front-end
-  (you can start by running the file and the server should be ready listening for requests)
-- ### main.py
-  As i already trained the model and saved it so in this file we just load the saved model and define some functions to be used in our `server.py`
-- ### uploads
-  folder used to help the backend save the files coming from the front end
-
-## 4-FRONTEND
-
-GUI for the project we can upload any file and it identifies if its a male or a female based on our saved model
-(you can start by running `npm run dev` in the front-end folder and the gui should be available on `http://localhost:(port)/` port is available in terminal)
-(you must start the server.py in the backend so you can use the model)
